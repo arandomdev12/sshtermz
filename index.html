@@ -149,6 +149,7 @@
             };
             
             ws.onclose = () => {
+                clearInterval(heartbeatInterval);
                 term.write("\r\nConnection closed.\r\n");
             };
         }
